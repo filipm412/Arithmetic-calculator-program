@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program</title>
+</head>
+<body>
+    <script>
+           let a = parseFloat(prompt("Unesite prvu vrednost"));
+           let operator = prompt("Unesite aritmeticki simbol:");
+           let b = parseFloat(prompt("Unesite drugu vrednost"));
+
+           
+           if (operator == "*") {
+                if (a == 0 || b == 0) {
+                    alert("Mnozenje nad nulom nije moguce");
+                    var e = new Error("Mnozenje nad nulom nije moguce");
+                    e.name = "Aritmeticka greska";
+                    throw e
+                }
+                else {
+                    var mnozenje = a * b;
+                    alert("Rezultat je " + mnozenje.toFixed(2));
+                }   
+           }
+           else if (operator == "/") {
+                if (a == 0 || b == 0) {
+                    alert("Deljenje nad nulom nije moguce");
+                    var e = new Error("Deljenje nad nulom nije moguce");
+                    e.name = "Aritmeticka greska";
+                    throw e
+                }
+                else {
+                    var deljenje = a / b;
+                    alert("Rezultat je " + deljenje.toFixed(2));
+                }  
+           }
+           else if (operator == "+") {
+               var sabiranje = a + b;
+               alert("Rezultat je " + sabiranje.toFixed(2));
+           }
+           else {
+               var oduzimanje = a - b;
+               alert("Rezultat je " + oduzimanje.toFixed(2));
+           }     
+    </script>
+</body>
+</html>
